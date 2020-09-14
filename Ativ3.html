@@ -1,0 +1,133 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro</title>
+		<link rel="stylesheet" href="bootstrap.css" />
+		<script>
+			function validarForm() {
+				var x = document.forms["cadastro"]["nome"].value;
+				var y = document.forms["cadastro"]["datanasc"].value;
+				var z = document.forms["cadastro"]["ano"].value;
+				var w = document.forms["cadastro"]["materia"].value;
+				if (x == "" || y == "" || z == "" || w == "") {
+					alert("Favor preencher todos os campos");
+					return false;
+				}
+			}
+		</script>
+		
+
+	</head>
+	
+	<body>
+		<div class="container">
+		<h1>Cadastro de alunos - Escola Inovation</h1></br></br>
+		<form name="cadastro" class="row" onsubmit="return validarForm()">
+			
+			<div class="col-3">
+				<label>Nome:</label>
+				<input type="text" name="nome" class="form-control" />
+			</div>
+
+			<div class="col-3">
+				<label>Data de nascimento:</label>
+				<input type="date" name="datanasc" class="form-control" />
+			</div>
+			
+			<div class="col-2">
+				<label>Ano que cursa:</label>
+				<input type="number" min="1" max="5" name="ano" class="form-control" />
+			</div>
+			
+			<div class="col-3">
+				<label>Matéria preferida:</label>
+				<select name="materia" class="form-control" />
+					<option value="">Selecione...</option>
+					<option value="web">Desenvolvimento web</option>
+					<option value="python">Programação Pyhton</option>
+					<option value="data">Ciência de dados</option>
+					<option value="alg">Algoritmo</option>
+				</select>	
+			</div>
+			
+			<div class="col-1">
+				<button type="submit" class="btn btn-success" style="margin-top: 30px;">Salvar</button>
+			</div>
+		</form>
+		<br/>
+		<table class="table table-striped">
+			<colgroup>
+				<col width="200">
+				<col width="150">
+				<col width="100">
+				<col width="100">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Matéria preferida</th>
+					<th>Editar</th>
+					<th>Excluir</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Tiago</td>
+					<td>Desenvolvimento web</td>
+					<td>
+						<button class="btn btn-warning">Editar</button>
+					</td>
+					<td>
+						<button class="btn btn-danger">Excluir</button>
+					</td>
+				</tr>
+					<tr>
+					<td>João</td>
+					<td>Algoritmo</td>
+					<td>
+						<button class="btn btn-warning">Editar</button>
+					</td>
+					<td>
+						<button class="btn btn-danger">Excluir</button>
+					</td>
+				</tr>
+				</tr>
+					<tr>
+					<td>Maria</td>
+					<td>Programação em Pyhton</td>
+					<td>
+						<button class="btn btn-warning">Editar</button>
+					</td>
+					<td>
+						<button class="btn btn-danger">Excluir</button>
+					</td>
+				</tr>
+				</tr>
+					<tr>
+					<td>Carlos</td>
+					<td>Ciência de dados</td>
+					<td>
+						<button class="btn btn-warning">Editar</button>
+					</td>
+					<td>
+						<button class="btn btn-danger">Excluir</button>
+					</td>
+				</tr>
+					</tr>
+					<tr>
+					<td>Mônica</td>
+					<td>Desenvolvimento web</td>
+					<td>
+						<button class="btn btn-warning">Editar</button>
+					</td>
+					<td>
+						<button class="btn btn-danger">Excluir</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</body>
+	
+
+</html>
